@@ -48,7 +48,7 @@ All products include realistic names, pricing, and descriptions, to simulate a p
 
 ---
 
-# Tecnology Stack
+# Technology Stack
 
 - Node.js
 - Express.js
