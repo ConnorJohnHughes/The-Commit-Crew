@@ -2,7 +2,7 @@
 
 ## POWER DRIP - Professional Fitness Drinks & Supplements Retailer
 
-**Proffesional Ecommerce Web Application**+
+**Proffesional Ecommerce Web Application**\
 Web Frameworks Capstone Project
 
 ---
