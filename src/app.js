@@ -1,6 +1,6 @@
 import express from 'express';
 import defaultRouter from './routers/default.routes.js';
-import pagesRouter from './routers/pages.router.js';
+import pagesRouter from './routers/pages.routes.js';
 
 //configure Express.js app
 const app = express();
