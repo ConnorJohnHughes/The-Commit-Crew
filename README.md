@@ -1,3 +1,5 @@
+![Screenshot](/public/images/LOGO.png)
+
 # The Commit Crew
 
 ## POWER DRIP - Professional Fitness Drinks & Supplements Retailer
