@@ -1,11 +1,11 @@
 :root {
-    --bg: #020617;
-    --panel: #020617;
-    --card: #111827;
-    --text: #e5e7eb;
-    --muted: #9ca3af;
-    --accent: #38bdf8;
-    --border: rgba(255, 255, 255, 0.08);
+--bg: #0a0a0a;          /* true black */
+--panel: #111111;      /* charcoal */
+--card: #1a1a1a;       /* dark gray */
+--text: #f5f5f5;       /* off-white */
+--muted: #a3a3a3;      /* neutral gray */
+--accent: #dc2626;     /* power red */
+--border: rgba(220, 38, 38, 0.25);
 }
 
 * {
@@ -13,10 +13,18 @@
 }
 
 body {
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    background: linear-gradient(180deg, #020617, #020617 280px, #0f172a);
-    color: var(--text);
+margin: 0;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+
+background: linear-gradient(
+  180deg,
+  #0a0a0a,    
+  #111111 280px,
+  #1a1a1a     
+);
+
+color: var(--text);
 }
 
 /* ===== Hero ===== */
@@ -37,29 +45,13 @@ body {
     }
 }
 
-.hero-content h1 {
+h1 {
     margin: 0;
     font-size: 2.6rem;
+    justify-self: center;
 }
 
-.hero-content p {
-    margin-top: 0.5rem;
-    font-size: 1.1rem;
-    color: var(--muted);
-}
 
-.hero-image {
-    display: flex;
-    justify-content: center;
-}
-
-.hero-image img {
-    max-width: 100%;
-    border-radius: 14px;
-    box-shadow:
-        0 20px 40px rgba(0, 0, 0, 0.6),
-        0 0 0 1px var(--border);
-}
 
 /* ===== Layout ===== */
 
@@ -67,9 +59,17 @@ body {
     max-width: 1100px;
     margin: 0 auto;
     padding: 2rem 1.5rem;
+    border-radius: 2rem;
+    border-color: var(--accent);
+    border-style: dashed;
 }
 
-/* ===== Card ===== */
+header{
+    color:red;
+    border-style: solid;
+    border-width: 2rem;
+    justify-items: center;
+}
 
 .card {
     background: var(--card);
@@ -79,50 +79,35 @@ body {
         0 20px 40px rgba(0, 0, 0, 0.5),
         0 0 0 1px var(--border);
 }
-
-.card h2 {
-    margin-top: 0;
+.productCards{
+    display: flex;
+    flex-direction:row ;
+    justify-content: center;
+    margin: 3rem;
+}
+.newProducts{
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    border-radius: 2rem;
+    border-style: double;
+    width: 50%;
+    height: 30rem;
+}
+.reviews {
+    width: 75%;
+    height: 15rem;
+    border-style: groove;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
 }
 
-ul {
-    padding-left: 1.2rem;
-}
 
-li {
-    margin-bottom: 0.4rem;
-}
 
-code {
-    background: #020617;
-    padding: 0.25rem 0.45rem;
-    border-radius: 6px;
-    font-size: 0.9rem;
-}
 
-/* ===== Buttons ===== */
 
-.button {
-    display: inline-block;
-    margin-top: 1.5rem;
-    padding: 0.6rem 1.3rem;
-    border-radius: 8px;
-    background: var(--accent);
-    color: #020617;
-    text-decoration: none;
-    font-weight: 600;
-}
 
-.button.secondary {
-    background: transparent;
-    color: var(--accent);
-    border: 1px solid var(--accent);
-}
 
-/* ===== Footer ===== */
 
-.footer {
-    text-align: center;
-    padding: 2.5rem 1rem;
-    color: var(--muted);
-    font-size: 0.9rem;
-}
