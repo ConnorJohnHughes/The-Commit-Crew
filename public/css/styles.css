@@ -21,15 +21,22 @@
   font-weight: 400;
   font-style: normal;
 }
+a, a:visited {
+            text-decoration: none;
+            color: white
+}
 
 body {
 margin: 0;
 font-family: 'Protest Strike', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 background: linear-gradient(
   180deg,
-  #0a0a0a,    
+  /* #0a0a0a,    
   #111111 280px,
-  #1a1a1a     
+  #1a1a1a      */
+  #250902,
+  #38040E 380px,
+  #640D14
 );
 
 color: var(--text);
@@ -64,35 +71,53 @@ h1 {
 /* ===== Layout ===== */
 
 .container {
-    max-width: 1100px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 2rem 1.5rem;
-    border-radius: 2rem;
     border-color: var(--accent);
     border-style: dashed;
 }
-
-header{
-    color:red;
-    border-style: solid;
-    border-width: 2rem;
-    justify-items: center;
-}
-
-.card {
-    background: var(--card);
-    border-radius: 14px;
-    padding: 2rem;
-    box-shadow:
-        0 20px 40px rgba(0, 0, 0, 0.5),
-        0 0 0 1px var(--border);
+/* Cards CSS */
+.newReleases{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    background-color: #0a0a0a;
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    h2  {
+        grid-column: span 2 / span 2;
+        
+    }
+    a{
+        grid-column: span 2 / span 2;
+        grid-column-start: 3;
+    }
 }
 .productCards{
+    grid-column: span 4 / span 4;
+    grid-row-start: 2;
     display: flex;
     flex-direction:row ;
     justify-content: center;
     margin: 3rem;
+    
+    .card {
+        background: var(--card);
+        border-radius: 14px;
+        padding: 2rem;
+        box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.5),
+            0 0 0 1px var(--border);
+    }
 }
+/* End of Cards css */
+
 .newProducts{
     margin: 3rem;
     display: flex;
