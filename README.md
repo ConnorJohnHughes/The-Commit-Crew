@@ -6,10 +6,12 @@
 
 **Proffesional Ecommerce Web Application**\
 Web Frameworks Capstone Project
+![Screenshot](/public/images/header.png)
 
 ---
 
 ## Project Overview
+![Screenshot](/public/images/project%20overview.png)
 
 POWER DRIP is a professional ecommerce web application focused on high-quality fitness drinks, protein powders, and performance supplements. The tore is designed to simulate a realistic retail store front for health-conscious consumers, athletes, and fitness enthusiasts.
 
@@ -29,6 +31,7 @@ This project serves as a portfolio-ready example of structured, maintainable web
 ---
 
 # Product Category
+![Screenshot](/public/images/products.png)
 
 POWER DRIP specializes in:
 
@@ -43,6 +46,7 @@ All products include realistic names, pricing, and descriptions, to simulate a p
 ---
 
 # Team Members
+![Screenshot](/public/images/team.png)
 
 - Connor Hughes
 - Orion De Los Santos
@@ -51,6 +55,7 @@ All products include realistic names, pricing, and descriptions, to simulate a p
 ---
 
 # Technology Stack
+![Screenshot](/public/images/tech%20stack.png)
 
 - Node.js
 - Express.js
