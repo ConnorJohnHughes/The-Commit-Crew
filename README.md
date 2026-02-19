@@ -1,19 +1,26 @@
-![Screenshot](/public/images/LOGO.png)
+<p align="center">
+  <img src="/public/images/LOGO.png" width="300" />
+</p>
 
 # The Commit Crew
 
-## POWER DRIP - Professional Fitness Drinks & Supplements Retailer
+## POWER DRIP
+### Professional Fitness Drinks & Supplements Retailer
 
-**Proffesional Ecommerce Web Application**\
+**Profesional Ecommerce Web Application**
 Web Frameworks Capstone Project
-![Screenshot](/public/images/header.png)
+<p align="center">
+  <img src="/public/images/header.png" width="800" />
+</p>
 
 ---
 
 ## Project Overview
-![Screenshot](/public/images/project%20overview.png)
+<p align="center">
+  <img src="/public/images/project overview.png" width="800" />
+</p>
 
-POWER DRIP is a professional ecommerce web application focused on high-quality fitness drinks, protein powders, and performance supplements. The tore is designed to simulate a realistic retail store front for health-conscious consumers, athletes, and fitness enthusiasts.
+POWER DRIP is a professional ecommerce web application focused on high-quality fitness drinks, protein powders, and performance supplements. The store is designed to simulate a realistic retail store front for health-conscious consumers, athletes, and fitness enthusiasts.
 
 The purpose of this project is to demonstrate full-stack web application architecture using:
 
@@ -31,7 +38,9 @@ This project serves as a portfolio-ready example of structured, maintainable web
 ---
 
 # Product Category
-![Screenshot](/public/images/products.png)
+<p align="center">
+  <img src="/public/images/products.png" width="800" />
+</p>
 
 POWER DRIP specializes in:
 
@@ -46,22 +55,26 @@ All products include realistic names, pricing, and descriptions, to simulate a p
 ---
 
 # Team Members
-![Screenshot](/public/images/team.png)
+<p align="center">
+  <img src="/public/images/team.png" width="700" />
+</p>
 
-- Connor Hughes
-- Orion De Los Santos
-- Xavier Lewis
+- **Connor Hughes**
+- **Orion De Los Santos**
+- **Xavier Lewis**
 
 ---
 
 # Technology Stack
-![Screenshot](/public/images/tech%20stack.png)
+<p align="center">
+  <img src="/public/images/tech stack.png" width="700" />
+</p>
 
-- Node.js
-- Express.js
-- EJS Templating Engine
-- MySQL
-- CSS (Flexbox/Grid-based layout)
+- **Backend:** Node.js, Express.js  
+- **Frontend:** EJS Templating Engine, CSS (Flexbox & Grid)  
+- **Database:** MySQL  
+- **Architecture:** MVC, Server-Side Rendering  
+- **Security:** Session-based authentication & state management  
 
 ---
 
