@@ -130,13 +130,11 @@ h1 {
         background: var(--card);
         border-radius: 14px;
         padding: 2rem;
-        box-shadow:
-            0 20px 40px rgba(0, 0, 0, 0.5),
-            0 0 0 1px var(--border);
     }
 }
 /* End of Cards css */
 
+/* Reviews CSS */
 .reviews {
     width: 50%;
     border-style: dotted;
@@ -155,15 +153,37 @@ h1 {
     }
 }
 
+/* End of Reviews */
+
+
 .signup{
-    margin: 3rem;
+    margin: 3rem auto;
     display: flex;
-    justify-content: center;
-    justify-self: center;
+    flex-flow: column nowrap;
     border-radius: 2rem;
+    justify-content: center;
+    text-align: center;
     border-style: double;
+    width: 60%;
+    height: 15rem;
+    background-color: #1a1a1a;
+    button{
+        width: 10%;
+        margin: 1rem auto;
+        font-family: 'Bebas Neue';
+        font-size: 24px;
+        background-color: #111111;
+        color: white;
+    }
+    box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.5),
+            0 0 0 1px var(--border);
+}
+#email{
     width: 50%;
-    height: 30rem;
+    margin: 0 auto;
+    font-size: 24px;
+    font-family: 'Bebas Neue';
 }
 
 
