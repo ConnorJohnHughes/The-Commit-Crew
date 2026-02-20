@@ -187,8 +187,15 @@ h1 {
 }
 
 
+#logo{
+    width: 500px;
+}
 
-
+.productImages{
+    width: 100%;
+    height: 90%;
+    border-radius: 2rem;
+}
 
 
 
