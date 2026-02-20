@@ -21,18 +21,29 @@
   font-weight: 400;
   font-style: normal;
 }
+a, a:visited {
+            text-decoration: none;
+            color: white
+}
 
 body {
 margin: 0;
-font-family: 'Protest Strike', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+font-family: 'Bebas Neue', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 background: linear-gradient(
   180deg,
-  #0a0a0a,    
+  /* #0a0a0a,    
   #111111 280px,
-  #1a1a1a     
+  #1a1a1a      */
+  #250902,
+  #38040E 380px,
+  #640D14
 );
 
 color: var(--text);
+}
+
+h1, h2, h3{
+    font-family: 'Protest Strike', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* ===== Hero ===== */
@@ -64,52 +75,115 @@ h1 {
 /* ===== Layout ===== */
 
 .container {
-    max-width: 1100px;
+    max-width: 100%;
     margin: 0 auto;
+    height: 600px;
     padding: 2rem 1.5rem;
-    border-radius: 2rem;
     border-color: var(--accent);
     border-style: dashed;
+    text-align: center;
 }
-
-header{
-    color:red;
-    border-style: solid;
-    border-width: 2rem;
-    justify-items: center;
-}
-
-.card {
-    background: var(--card);
-    border-radius: 14px;
-    padding: 2rem;
-    box-shadow:
-        0 20px 40px rgba(0, 0, 0, 0.5),
-        0 0 0 1px var(--border);
+/* Cards CSS */
+.newReleases{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 8px;
+    background-color: #0a0a0a;
+    width: 75%;
+    margin: 3rem auto;
+    text-align: center;
+    border-radius: 1rem;
+    height: 800px;
+    #newReleaseTitle{
+        grid-column: span 2 / span 2;
+        font-size: 52px;
+    }
+    #newReleaseProducts{
+        grid-column: span 2 / span 2;
+        grid-column-start: 3;
+        align-content: center;
+        a   {
+            border: white solid 2px;  
+            padding: 1rem;
+            border-radius: 2rem;
+            
+        }
+        a:hover{
+            background-color: #111111;
+        }
+    }
 }
 .productCards{
+    grid-column: span 4 / span 4;
+    grid-row: span 6 / span 6;
+    grid-row-start: 2;
     display: flex;
     flex-direction:row ;
     justify-content: center;
     margin: 3rem;
+    gap: 12px;
+    .card {
+        background: var(--card);
+        border-radius: 14px;
+        padding: 2rem;
+    }
 }
-.newProducts{
-    margin: 3rem;
-    display: flex;
-    justify-content: center;
-    justify-self: center;
-    border-radius: 2rem;
-    border-style: double;
-    width: 50%;
-    height: 30rem;
-}
+/* End of Cards css */
+
+/* Reviews CSS */
 .reviews {
-    width: 75%;
-    height: 15rem;
-    border-style: groove;
+    width: 50%;
+    border-style: dotted;
     display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     justify-content: center;
     justify-self: center;
+    margin: 3rem auto;
+}
+.reviewBox{
+    width: 50%;
+    text-align: center;
+    p{
+        font-family: 'Bebas Neue', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+}
+
+/* End of Reviews */
+
+
+.signup{
+    margin: 3rem auto;
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: 2rem;
+    justify-content: center;
+    text-align: center;
+    border-style: double;
+    width: 60%;
+    height: 15rem;
+    background-color: #1a1a1a;
+    button{
+        width: 10%;
+        margin: 1rem auto;
+        font-family: 'Bebas Neue';
+        font-size: 24px;
+        background-color: #111111;
+        color: white;
+    }
+    box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.5),
+            0 0 0 1px var(--border);
+}
+#email{
+    width: 50%;
+    margin: 0 auto;
+    font-size: 24px;
+    font-family: 'Bebas Neue';
 }
 
 

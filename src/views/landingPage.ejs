@@ -16,43 +16,49 @@
     <%- include('partials/header') %>
 
     <body>
-        <header>Search bar, shopping cart, account, nav bar....Could just be icons for now</header>
-        <h1>Power Drip</h1> <!-- Big pop up title or logo with the commit crew power drip-->
+        <!-- Condensed the hardcoded header into the partials -->
+        <!-- <header>Search bar, shopping cart, account, nav bar....Could just be icons for now</header> -->
+        <!-- Big pop up title or logo with the commit crew power drip-->
         <div class="container" >Banner for logo, motto, or etc.. </div>
 
-        <div class="productCards">
-            <div class="card">
-                Image of drinks or products
+        <div class="newReleases">
+            <h2 id="newReleaseTitle">New Releases</h2>
+            <div id="newReleaseProducts">
+                <h2><a href="/products">Products</a></h2>
             </div>
+            <div class="productCards">
+                <div class="card">
+                    Image of drinks or products
+                </div>
 
-            <div class="card">
-                Image of drinks or products
+                <div class="card">
+                    Image of drinks or products
+                </div>
+
+                <div class="card">
+                    Image of drinks or products
+                </div>
+
+                <div class="card">
+                    Image of drinks or products
+                </div>
             </div>
-
-            <div class="card">
-                Image of drinks or products
-            </div>
-
-            <div class="card">
-                Image of drinks or products
-            </div>
-
-            <div class="card">
-                Image of drinks or products
-            </div>
-        </div>
-
-        <div class="newProducts">
-            Scrollable bar that displays most recent products
         </div>
 
         <div class="reviews">
-            A good review of the product- 4.5 out of 5 stars! by John Doe, This drink changes my life! etc, etc...
-
+            <div class="reviewBox"><h3>Joe - 5⭐</h3><p>I love this product!</p></div>
+            <div class="reviewBox"><h3>Joe - 5⭐</h3><p>I love this product!</p></div>
+            <div class="reviewBox"><h3>Joe - 5⭐</h3><p>I love this product!</p></div>
+            <div class="reviewBox"><h3>Joe - 5⭐</h3><p>I love this product!</p></div>
+            <div class="reviewBox"><h3>Joe - 5⭐</h3><p>I love this product!</p></div>
+            <div class="reviewBox"><h3>Joe - 5⭐</h3><p>I love this product!</p></div>
         </div>
 
-        <div>
-            
+        <div class="signup">
+            <h2>Sign up for our news letter to get the latest news about Power Drip!</h2>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <button>Submit</button>
         </div>
 
     </body>
