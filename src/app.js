@@ -1,7 +1,7 @@
 import express from 'express';
 import defaultRouter from './routers/default.routes.js';
 import pagesRouter from './routers/pages.routes.js';
-import mysql from 'mysql2';
+
 
 //configure Express.js app
 const app = express();

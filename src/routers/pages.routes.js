@@ -1,6 +1,7 @@
 import { Router } from 'express';
-
+import * as ctl from '../controllers/default.controller.js';
 const router = Router();
+
 
 // Stub Login Page
 router.get("/login", (req, res) => {
@@ -17,11 +18,15 @@ router.get("/register", (req, res) => {
 });
 
 // Stub Products Page
-router.get("/products", (req, res) => {
-  res.render("products", {
-    title: "Products"
-  });
-});
+// router.get("/products", (req, res) => {
+//   res.render("products",{
+//     title: "Products",
+    
+    
+//   });
+// });
+
+router.get('/products', ctl.allProducts )
 
 // Stub About Page 
 router.get("/about", (req, res) => {
@@ -29,5 +34,7 @@ router.get("/about", (req, res) => {
     title: "About"
   });
 });
+
+
 
 export default router;
