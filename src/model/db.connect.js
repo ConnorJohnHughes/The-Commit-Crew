@@ -16,6 +16,6 @@ export const connectDB = async () => {
     console.log(chalk.blue("----------------------Connected to Database-----------------------------"));
   } catch (err) {
     console.log(chalk.red("Database connection failed"));
-    console.error(err);
+    throw err;
   }
 };  
