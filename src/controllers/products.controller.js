@@ -1,12 +1,15 @@
 // Products API Controller
-import { getAllProducts } from "../services/products.service.js";
+//import { getAllProducts } from "../services/products.service.js";
+import { getFilteredProducts } from "../services/products.service.js";
 
 /**
  * Get /api/products
  */
 export const getProducts = async (req, res) => {
   try {
-    const products = await getAllProducts();
+    const filters = req.query;
+
+    const products = await getFilteredProducts(filters);
 
     return res.status(200).json({
       success: true,
