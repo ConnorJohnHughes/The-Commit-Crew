@@ -30,6 +30,23 @@ export const getFilteredProducts = async (filters) => {
     values.push(filters.category);
   }
 
+  // filter products with price >= minPrice
+  if (filters.minPrice) {
+    sql += " AND price >= ?";
+    values.push(filters.minPrice);
+  }
+
+  // filter products with price >= minPrice
+  if (filters.maxPrice) {
+    sql += " AND price <= ?";
+    values.push(filters.maxPrice);
+  }
+
+  // Sort by price
+  if (filters.sort === "price") {
+    sql += " ORDER BY price ASC";
+  }
+
   const [rows] = await connection.execute(sql, values);
 
   return rows;
