@@ -17,6 +17,7 @@ export const getProducts = async (req, res) => {
       data: products
     });
   } catch (err) {
+    console.error("Error in getProducts:", err.message);
     return res.status(500).json({
       success: false,
       message: "Server Error"
