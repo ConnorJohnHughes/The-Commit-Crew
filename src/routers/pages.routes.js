@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import * as ctl from '../controllers/default.controller.js';
+import * as ctl from '../controllers/products.controller.js';
 const router = Router();
 
 
@@ -18,15 +18,20 @@ router.get("/register", (req, res) => {
 });
 
 // Stub Products Page
-// router.get("/products", (req, res) => {
-//   res.render("products",{
-//     title: "Products",
+router.get("/products", ctl.allProducts, (req, res) => {
+  res.render("products",{
+    title: "Products",
     
-    
-//   });
-// });
+  });
+});
 
-router.get('/products', ctl.allProducts )
+// Stub Single product page by ID
+router.get("/singleProductPage", (req,res) => {
+  res.render("singleProductPage",{
+    title: "Single Product Page",
+
+  })
+})
 
 // Stub About Page 
 router.get("/about", (req, res) => {

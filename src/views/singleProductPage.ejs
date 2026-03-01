@@ -17,18 +17,7 @@
 
   <main>
     <h1><%= title %></h1>
-      <p>Products page coming soon.</p>
-        <div id="product-card">
-          <h2>Selected Product </h2>
-            <p>
-              <form action="/singleProductPage" id="productSearch-form" >
-                <label for="productID">Enter Product ID: </label>
-                <input type="text" name="productIDInput" id="productIDInput" >
-                <button id="productIDSearch" type="submit"> Search</button>
-              </form>
-            </p>
-        </div>
-      <ul>
+          <ul>
       <% if (products && products.length > 0) { %>
         <% products.forEach(product => { %>
           <li>
@@ -42,6 +31,9 @@
         <li>No products found.</li>
       <% } %>
       </ul>
+    
+
+      
     
   </main>
 

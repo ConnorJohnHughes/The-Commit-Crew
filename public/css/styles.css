@@ -197,6 +197,23 @@ h1 {
     border-radius: 2rem;
 }
 
-
+#product-card{
+    border-radius: 2rem;
+    border-width: 1rem;
+    border-style: double;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+    gap: 2rem;
+}
+#productIDInput{
+    width: 75rem;
+    height: max-content;
+    margin-right: 2rem;
+}
+#productIDSearch{
+    width: 10rem;
+}
 
 

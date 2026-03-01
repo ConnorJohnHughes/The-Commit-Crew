@@ -52,3 +52,18 @@ export const getFilteredProducts = async (filters) => {
   return rows;
 }
 
+
+// Find a single product by ID number
+export const getProductID = async (id) => {
+  const [ results ] = await connection.query(
+    "SELECT * FROM products WHERE id = ?",
+    [id]
+  );
+
+  console.log(`service page ${id}`);
+
+  return results[0];
+
+   
+}
+
