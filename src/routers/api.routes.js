@@ -1,11 +1,11 @@
 import { Router } from "express";
-import { getProducts, getProductsById } from "../controllers/products.controller.js";
+import { getProducts, productsById } from "../controllers/products.controller.js";
 
 const router = Router();
 
 // REST Endpoint - Products API (stub)
 router.get("/api/products", getProducts);
 
-router.get("/api/products/:id", getProductsById);
+router.get("/api/products/:id", productsById );
 
 export default router;

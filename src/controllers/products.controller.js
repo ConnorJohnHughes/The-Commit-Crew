@@ -76,3 +76,34 @@ export const getProductsById = async (req, res) => {
 };
 
 // products by ID API 
+export const productsById = async (req, res) => {
+  try {
+    const { id } = req. params;
+    
+    const product = await getProductID(id);
+
+    if(!product){
+      return res.status(404).json({
+        message: "Could not find product by id",
+        id: id
+      })
+    }
+
+    return res.status(200).json({
+      success: true,
+      product
+    });
+    
+
+  } catch (error) {
+    console.error("Error finding the product by Id", error.message);
+
+    return res.status(500).json({
+      title: "Server Error",
+      message: "Could not find product by id",
+      
+    })
+    
+  }
+
+}
