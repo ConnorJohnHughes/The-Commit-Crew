@@ -28,27 +28,28 @@ export const getProducts = async (req, res) => {
 
 export const getProductsById = async (req, res) => {
   try {
-  const  {id}  = req.params;
+    const { id } = req.params;
 
-  console.log(id);
-  const product = await getProductID(id);
+    const product = await getProductID(id);
 
-    return res.status(200).json({
-      success: true,
-      count: product.length,
-      data: product
+    if (!product) {
+      return res.status(404).render("404", {
+        title: "Product Not Found"
+      });
+    }
+
+    return res.render("singleProductPage", {
+      title: product.name,
+      product: product
     });
 
   } catch (error) {
     console.error("Error finding product by ID", error.message);
 
-    return res.status(500).json({
-      success: false,
-      message: "Something went wrong looking for ID",
-      
+    return res.status(500).render("error", {
+      title: "Server Error"
     });
-  };
-
+  }
 };
 
 

@@ -18,20 +18,10 @@ router.get("/register", (req, res) => {
 });
 
 // Stub Products Page
-router.get("/products", ctl.allProducts, (req, res) => {
-  res.render("products",{
-    title: "Products",
-    
-  });
-});
+router.get("/products", ctl.allProducts);
 
 // Stub Single product page by ID
-router.get("/singleProductPage", (req,res) => {
-  res.render("singleProductPage",{
-    title: "Single Product Page",
-
-  })
-})
+router.get("/products/:id", ctl.getProductsById);
 
 // Stub About Page 
 router.get("/about", (req, res) => {

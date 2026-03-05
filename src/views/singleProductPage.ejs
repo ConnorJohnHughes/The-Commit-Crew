@@ -15,27 +15,37 @@
   
   <%- include ("partials/header") %>
 
-  <main>
-    <h1><%= title %></h1>
-          <ul>
-      <% if (products && products.length > 0) { %>
-        <% products.forEach(product => { %>
-          <li>
-            <h3><%= product.name %></h3>
+<main class="single-product-container">
 
-            <p>Price: $<%= product.price %></p>
-            <p><%= product.description %></p>
-          </li>
-        <% }) %>
-      <% } else { %>
-        <li>No products found.</li>
-      <% } %>
-      </ul>
-    
+  <div class="single-product">
 
-      
-    
-  </main>
+    <div class="single-product-image">
+      <img src="<%= product.image %>" alt="<%= product.name %>">
+    </div>
+
+    <div class="single-product-details">
+      <h1><%= product.name %></h1>
+
+      <p class="single-product-price">$<%= product.price %></p>
+
+      <p class="single-product-category">
+        Category: <%= product.category %>
+      </p>
+
+      <p class="single-product-description">
+        <%= product.description %>
+      </p>
+
+      <div class="single-product-actions">
+        <button class="add-to-cart-btn">Add to Cart</button>
+        <a href="/products" class="back-btn">← Back to Products</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
 
   <%- include("partials/footer") %>
 
