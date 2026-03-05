@@ -60,8 +60,6 @@ export const getProductID = async (id) => {
     [id]
   );
 
-  console.log(`service page ${id}`);
-
   return results[0];
 
    

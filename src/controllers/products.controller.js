@@ -26,6 +26,29 @@ export const getProducts = async (req, res) => {
   }
 };
 
+
+
+// All products page rendering
+export const allProducts = async (req, res) => {
+    try{
+      const products = await getAllProducts();
+
+       return res.render('products', {
+              title: 'Products',
+              products: products
+  });
+  
+  
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json({
+            message: "Soemthing went wrong!!"
+        })
+    }
+};
+
+
+// products by id page rendering 
 export const getProductsById = async (req, res) => {
   try {
     const { id } = req.params;
@@ -52,21 +75,4 @@ export const getProductsById = async (req, res) => {
   }
 };
 
-
-export const allProducts = async (req, res) => {
-    try{
-      const products = await getAllProducts();
-
-       return res.render('products', {
-              title: 'Products',
-              products: products
-  });
-  
-  
-    } catch (err) {
-        console.log(err);
-        return res.status(500).json({
-            message: "Soemthing went wrong!!"
-        })
-    }
-};
+// products by ID API 
