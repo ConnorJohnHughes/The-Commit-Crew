@@ -20,6 +20,14 @@
 <main>
   <h1><%= title %></h1>
 
+  <div class="products-toolbar">
+    <input
+      id="searchInput"
+      type="text"
+      placeholder="Search products..."
+    >
+  </div>
+
   <div id="productsGrid" class="products-grid">
     <% if (products && products.length > 0 ) { %>
 

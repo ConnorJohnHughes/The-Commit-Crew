@@ -42,6 +42,12 @@ export const getFilteredProducts = async (filters) => {
     values.push(filters.maxPrice);
   }
 
+  // if search text was provided, filter name by product name
+  if (filters.search) {
+    sql += " AND name LIKE ?";
+    values.push(`%${filters.search}%`);
+  }
+
   // Sort by price
   if (filters.sort === "price") {
     sql += " ORDER BY price ASC";

@@ -5,6 +5,20 @@ console.log("products.filter.js loaded");
 const productsGrid = document.querySelector("#productsGrid");
 console.log("productGrid found?", Boolean(productsGrid));
 
+const searchInput = document.querySelector("#searchInput");
+console.log("searchInput found?", Boolean(searchInput));
+
+// Listens for typing in the search bar
+searchInput.addEventListener("input", () => {
+  // gets the text the user typed
+  const searchText = searchInput.value;
+  console.log("input event searchText:", searchText);
+  // confirm it works
+  //console.log("User typed:", searchText);
+
+  fetchProducts(searchText);
+});
+
 // this creates the HTML for a single product card
 // receives a product object from the API and returns a string of HTML
 function createProductCard(product) {
@@ -23,15 +37,16 @@ function createProductCard(product) {
 }
 
 // Fetches product from API and renders them in the grid on the page
-async function fetchProducts() {
+async function fetchProducts(searchText = "") {
+  console.log("fetchProduct searchText:", searchText);
   try {
     // Calls the REST API endpoint
-    const response = await fetch("/api/products");
+    const response = await fetch(`/api/products?search=${searchText}`);
 
     // convert response into a javascript object
     const responseData = await response.json();
 
-    console.log("API response:", responseData)
+    console.log("response data from api:", responseData);
 
     // Extract the array of products from the API response
     const products = responseData.data;
@@ -45,7 +60,7 @@ async function fetchProducts() {
     productsGrid.innerHTML = productsHTML
 
   } catch (err) {
-    console.log("Network errer:", err)
+    console.log("Fetch products errer:", err)
   }
 }
 
