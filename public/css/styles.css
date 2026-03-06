@@ -201,6 +201,11 @@ h1 {
 
 /* Products Page */
 
+.products-toolbar{
+    margin: auto;
+    text-align: center;
+}
+
 #productsGrid{
     margin: auto;
     text-align: center;
