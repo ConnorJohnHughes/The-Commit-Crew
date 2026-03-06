@@ -4,13 +4,6 @@
     background-color: black;
     padding: 1rem;
     /* The nav is the container holding the order of the links */
-
-        /* nav{
-            //This is the former nav setup prior to Pure CSS implement
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        } */
         nav{
             margin: auto;
             text-align: center;
