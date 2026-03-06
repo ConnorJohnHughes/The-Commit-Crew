@@ -6,7 +6,13 @@
   <title><%= title %></title>
   <link rel="icon" type="image/png"  href="/images/Powerdrip.png">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="/css/styles.css" />
+
+  <!-- Pure CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Protest+Strike&display=swap" rel="stylesheet">
@@ -16,33 +22,33 @@
   <%- include ("partials/header") %>
 
 <main class="single-product-container">
+  <a href="/products" class="back-btn">← Back to Products</a>
+  <div class="pure-g single-product">
 
-  <div class="single-product">
-
-    <div class="single-product-image">
-      <img src="<%= product.image %>" alt="<%= product.name %>">
+    <div class="single-product-image pure-u-1 pure-u-lg-1-2">
+      <img src="<%= product.image_path%>" alt="<%= product.name %>">
     </div>
 
-    <div class="single-product-details">
-      <h1><%= product.name %></h1>
+    <div class="single-product-details pure-u-1 pure-u-lg-1-2">
+      <div class="single-product-wrapper">
+        <h1><%= product.name %></h1>
 
-      <p class="single-product-price">$<%= product.price %></p>
+        <p class="single-product-price">$<%= product.price %></p>
 
-      <p class="single-product-category">
-        Category: <%= product.category %>
-      </p>
+        <p class="single-product-category">
+          Category: <%= product.category %>
+        </p>
 
-      <p class="single-product-description">
-        <%= product.description %>
-      </p>
+        <p class="single-product-description">
+          <%= product.description %>
+        </p>
 
-      <div class="single-product-actions">
-        <button class="add-to-cart-btn">Add to Cart</button>
-        <a href="/products" class="back-btn">← Back to Products</a>
+        <div class="single-product-actions">
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
       </div>
-
     </div>
-
   </div>
 
 </main>
