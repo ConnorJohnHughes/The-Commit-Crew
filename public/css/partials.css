@@ -4,29 +4,31 @@
     background-color: black;
     padding: 1rem;
     /* The nav is the container holding the order of the links */
-        nav{
+
+        /* nav{
+            //This is the former nav setup prior to Pure CSS implement
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+        } */
+        nav{
+            margin: auto;
+            text-align: center;
+            font-size: 24px;
         }
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-        li {
-            float: left;
-        }
-        ul li a {
-            display: block;
+        a {
+            margin: auto;
             color: white;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
-            font-size: 24px;
         }
-        ul li a:hover {
+        .pure-button-primary{
+            background: rgba(0, 0, 0, 0);
+            font-size: 36px;
+            border-radius: 1rem;
+        }
+        .pure-button-primary:hover {
             background-color: #111111;
         }
     /* End of Nav containier */
