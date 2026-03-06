@@ -191,24 +191,36 @@ h1 {
     width: 500px;
 }
 
+/* Pure CSS modifications*/
+.pure-g{
+    div{
+        box-sizing:initial;
+    }
+}
+/* end of pure css */
+
 /* Products Page */
+
 #productsGrid{
-    gap: 1rem;
+    margin: auto;
     text-align: center;
+    width: 75%;
+}
+.product-card-container{
+
 }
 .product-image{
-    width: 50%;
+    width: 40%;
     border-radius: 2rem;
-}
-.product-info{
-
+    margin: auto;
 }
 
 .product-card{
     border-radius: 2rem;
-    border-width: 1rem;
-    border: #0a0a0a;
-    border-style: double;
+    /* border: 1rem solid #0a0a0a; */
+    background-color: #0a0a0a;
+    margin:1rem;
+    padding: 1rem;
 }
 #productIDInput{
     width: 75rem;

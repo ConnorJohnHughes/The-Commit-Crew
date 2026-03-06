@@ -64,18 +64,20 @@ sortSelect.addEventListener("change", () => {
 // receives a product object from the API and returns a string of HTML
 function createProductCard(product) {
   return `
-    <div class="pure-u-1-4 product-card">
-      <a href="/products/${product.id}">
-          <div class="product-image">
-              <img src="${product.image_path}" alt="${product.name}" class="pure-img">
-          </div>
+    <div class="pure-u-1-4 product-card-container">
+    <div class="product-card">
+        <a href="/products/${product.id}">
+            <div class="product-image">
+                <img src="${product.image_path}" alt="${product.name}" class="pure-img">
+            </div>
 
-          <div class="product-info">
-              <h3>${product.name}</h3>
-              <p class="price">${product.price}</p>
-          </div>
-      </a>
-    </div>  
+            <div class="product-info">
+                <h3>${product.name}</h3>
+                <p class="price">${product.price}</p>
+            </div>
+        </a>
+    </div>
+</div>   
   `;
 }
 
