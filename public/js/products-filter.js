@@ -23,16 +23,18 @@ searchInput.addEventListener("input", () => {
 // receives a product object from the API and returns a string of HTML
 function createProductCard(product) {
   return `
-    <a href="/products/${product.id}" class="product-card">
-      <div class="product-image">
-        <img src="${product.image_path}" alt="${product.name}">
-      </div>
+    <div class="pure-u-1-4 product-card">
+      <a href="/products/${product.id}">
+          <div class="product-image">
+              <img src="${product.image_path}" alt="${product.name}" class="pure-img">
+          </div>
 
-      <div class="product-info">
-        <h3>${product.name}</h3>
-        <p class="price">${product.price}</p>
-      </div>
-    </a>    
+          <div class="product-info">
+              <h3>${product.name}</h3>
+              <p class="price">${product.price}</p>
+          </div>
+      </a>
+    </div>  
   `;
 }
 

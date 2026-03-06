@@ -6,7 +6,13 @@
   <title><%= title %></title>
   <link rel="icon" type="image/png"  href="/images/Powerdrip.png">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="/css/styles.css" />
+
+  <!-- Pure CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Protest+Strike&display=swap" rel="stylesheet">
@@ -28,29 +34,8 @@
     >
   </div>
 
-  <div id="productsGrid" class="products-grid">
-    <% if (products && products.length > 0 ) { %>
-
-      <% products.forEach(product => { %>
-
-        <a href="/products/<%= product.id %>" class="product-card">
-
-          <div class="product-image">
-            <img src="<%= product.image %>" alt="<%= product.name %>">
-          </div>
-
-          <div class="product-info">
-            <h3><%= product.name %></h3>
-            <p class="price">$<%= product.price %></p>
-          </div>
-
-        </a>
-
-      <% }) %>
-
-    <% } else { %>
-      <p>No products found.</p>
-    <% } %>
+  <div id="productsGrid" class="products-grid pure-g">
+    
   </div>
 
 </main>
