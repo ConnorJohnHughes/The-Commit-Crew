@@ -205,9 +205,9 @@ h1 {
     margin: auto;
     text-align: center;
     width: 75%;
+    
 }
 .product-card-container{
-
 }
 .product-image{
     width: 40%;
@@ -217,10 +217,17 @@ h1 {
 
 .product-card{
     border-radius: 2rem;
-    /* border: 1rem solid #0a0a0a; */
+    border: 8px solid #712828;
     background-color: #0a0a0a;
+    box-shadow: 10px 10px #1a1a1a;
     margin:1rem;
     padding: 1rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.product-card:hover{
+    border-color: #c94949;
+    transform: translateY(-10px);
+    box-shadow: 10px 20px #1a1a1a;
 }
 #productIDInput{
     width: 75rem;
