@@ -65,19 +65,19 @@ sortSelect.addEventListener("change", () => {
 function createProductCard(product) {
   return `
     <div class="pure-u-1 pure-u-sm-1-2 pure-u-xl-1-4 product-card-container">
-    <a href="/products/${product.id}">
-        <div class="product-card">
-            <div class="product-image">
-                <img src="${product.image_path}" alt="${product.name}" class="pure-img">
-            </div>
+      <a href="/products/${product.id}">
+          <div class="product-card">
+              <div class="product-image">
+                  <img src="${product.image_path}" alt="${product.name}" class="pure-img">
+              </div>
 
-            <div class="product-info">
-                <h3>${product.name}</h3>
-                <p class="price">${product.price}</p>
-            </div>
-        </div>
-    </a>
-</div>   
+              <div class="product-info">
+                  <h3>${product.name}</h3>
+                  <p class="price">${product.price}</p>
+              </div>
+          </div>
+      </a>
+    </div>   
   `;
 }
 

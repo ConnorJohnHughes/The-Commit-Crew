@@ -36,3 +36,7 @@ VALUES
 ('Power Drip - Electrolyte Mix Powder', 18.99, 'Electrolyte powder mix for hydration support.', 'powder', '/images/products/placeholder.png');
 
 
+DELETE FROM users; 
+
+INSERT INTO users (username, password)
+VALUES ('f00d', 'unhashed');

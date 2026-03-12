@@ -65,7 +65,6 @@ export const getProductID = async (id) => {
     "SELECT * FROM products WHERE id = ?",
     [id]
   );
-
   return results[0];
 
    

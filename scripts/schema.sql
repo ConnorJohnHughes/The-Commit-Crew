@@ -30,6 +30,17 @@ CREATE TABLE products (
   image_path VARCHAR(255),
 
   -- Automatically stores when the product was created
-  created_
-  at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE IF NOT EXISTS users (
+
+    userId INT NOT NULL AUTO_INCREMENT,
+
+    username VARCHAR(255) NOT NULL,
+
+    password VARCHAR(255) NOT NULL,
+
+    role ENUM('user','admin') NOT NULL DEFAULT 'user',
+
+    PRIMARY KEY (userId)
 );
