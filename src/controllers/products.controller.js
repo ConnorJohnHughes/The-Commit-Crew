@@ -93,7 +93,7 @@ export const productsById = async (req, res) => {
       success: true,
       product
     });
-    
+  
 
   } catch (error) {
     console.error("Error finding the product by Id", error.message);
