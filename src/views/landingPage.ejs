@@ -34,6 +34,13 @@
                     <h2><a href="/products">Products</a></h2>
                 </div>
             </div>
+
+            <% if (randomProducts && randomProducts.length > 0) { %>
+                <p>Random products loaded: <%= randomProducts.length %></p>
+            <% } else { %>
+                <p>No random products found.</p>
+            <% } %>    
+
             <div class="productCards pure-g">
                 <!-- EJS products cards -->
             
