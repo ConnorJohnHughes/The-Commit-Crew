@@ -4,6 +4,8 @@ import pagesRouter from './routers/pages.routes.js';
 import apiRouter from './routers/api.routes.js';
 import session from 'express-session';
 import dotenv from 'dotenv';
+import passport from 'passport';
+import '../auth/localStrategy.js';
 
 
 
@@ -34,6 +36,10 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }))
+
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 // attach the user to every request 
 app.use((req, res, next) => {
