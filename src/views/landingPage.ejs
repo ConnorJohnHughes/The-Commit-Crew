@@ -35,33 +35,30 @@
                 </div>
             </div>
 
-            <% if (randomProducts && randomProducts.length > 0) { %>
-                <p>Random products loaded: <%= randomProducts.length %></p>
-            <% } else { %>
-                <p>No random products found.</p>
-            <% } %>    
-
             <div class="productCards pure-g">
                 <!-- EJS products cards -->
             
-                <!--  -->
-                <div class="card pure-u-1 pure-u-lg-1-2 pure-u-xl-1-4">
-                    <img class="productImages" src="/images/products/product_1.png">
-                </div>
-
-                <div class="card pure-u-1 pure-u-lg-1-2 pure-u-xl-1-4">
-                    <img class="productImages" src="/images/products/product_2.png">
-                </div>
-
-                <div class="card pure-u-1 pure-u-lg-1-2 pure-u-xl-1-4">
-                    <img class="productImages" src="/images/products/product_3.png">
-                </div>
-
-                <div class="card pure-u-1 pure-u-lg-1-2 pure-u-xl-1-4">
-                    <img class="productImages" src="/images/products/product_4.png">
-                </div>
-            </div>
-        </div>
+                <!-- Displays 4 random products from the database  -->
+                <% if (randomProducts && randomProducts.length > 0) {%>
+                    <% randomProducts.forEach(product => { %>
+                        <a href="/products/<%= product.id %>" class="card pure-u-1 pure-u-lg-2 pure-u-xl-1-4">
+                            <!-- Display the product image from the database -->
+                            <img
+                                class="productImages"
+                                src="<%= product.image_path %>"
+                                alt="<%= product.name %>"
+                            >
+                            <!-- Display product details under product image -->
+                             <div class="product-info">
+                                <h3><%= product.name %></h3>
+                                <p class="price">$<%= product.price %></p>
+                             </div>    
+                        </a>
+                    <% }) %>
+                <% } else { %>
+                    <p>No products found.</p>
+                <% } %>  
+            </div>                  
 
         <div class="reviews">
             <div class="reviewBox"><h3>Joe - 5⭐</h3><p>I love this product!</p></div>
