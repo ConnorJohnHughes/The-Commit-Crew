@@ -4,6 +4,9 @@ import pagesRouter from './routers/pages.routes.js';
 import apiRouter from './routers/api.routes.js';
 import session from 'express-session';
 import dotenv from 'dotenv';
+import cookieParser from 'cookie-parser';
+
+
 
 
 
