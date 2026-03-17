@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { getProducts, productsById } from "../controllers/products.controller.js";
+import * as cartCtl from '../controllers/cart.controller.js';
 
 const router = Router();
 
@@ -10,14 +11,13 @@ router.get("/api/products/:id", productsById );
 
 
 // Session-based Cart Endpoints
+router.get("/api/cart", cartCtl.getCart);
 
-// GET /api/cart
+router.post("/api/cart/items", cartCtl.addItem);
 
-// POST /api/cart/items
+router.delete("/api/cart/items/:productId", cartCtl.removeItem);
 
-// DELETE /api/cart/items/:id
-
-// POST /api/cart/clear
+router.post("/api/cart/clear", cartCtl.clearCart);
 
 
 

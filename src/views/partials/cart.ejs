@@ -1,0 +1,19 @@
+<div id="mini-cart" class="cart-widget">
+    <h3>Cart (<span id="cart-count"><%= cart.length %></span>)</h3>
+
+    <div id="cart-items">
+        <% if (cart.length === 0) { %>
+            <p>Cart is empty</p>
+        <% } else { %>
+            <% cart.forEach(item => { %>
+                <div class="cart-item" data-id="<%= item.productID %>">
+                    <span><%= item.name %></span>
+                    <span>x <%= item.quantity %></span>
+                    <button class="remove-item">Remove</button>
+                </div>
+            <% }) %>
+        <% } %>
+    </div>
+
+    <button id="clear-cart">Clear Cart</button>
+</div>

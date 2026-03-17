@@ -7,6 +7,8 @@ import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 
 
+import passport from 'passport';
+import '../auth/localStrategy.js';
 
 
 
@@ -30,13 +32,28 @@ app.use(express.static('public'));
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 // Session 
 app.use(session({
     secret: SECRET,
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: true,
+    cookie: {
+        maxAge: 30 * 60 * 1000
+    }
 }))
+
+app.use((req,res,next)=>{
+    if(!req.session.cart){
+        req.session.cart = [];
+    }
+    next();
+});
+
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 // attach the user to every request 
 app.use((req, res, next) => {
@@ -47,6 +64,12 @@ app.use((req, res, next) => {
     };
     next();
 })
+
+app.use((req,res, next) =>{
+    res.locals.cart = req.session.cart || [];
+
+    next();
+});
 
 //routers
 app.use("/", defaultRouter);

@@ -11,7 +11,7 @@ export const getAllProducts = async () => {
   const sql = "SELECT * FROM products";
 
   // Returns an array of [rows, fields]
-  const [rows] = await connection.execute(sql);
+  const [rows] = await connection.query(sql);
 
   // Return rows
   return rows;
@@ -36,7 +36,7 @@ export const getFilteredProducts = async (filters) => {
     values.push(filters.minPrice);
   }
 
-  // filter products with price >= minPrice
+  // filter products with price <= maxPrice
   if (filters.maxPrice) {
     sql += " AND price <= ?";
     values.push(filters.maxPrice);
@@ -53,7 +53,7 @@ export const getFilteredProducts = async (filters) => {
     sql += " ORDER BY price ASC";
   }
 
-  const [rows] = await connection.execute(sql, values);
+  const [rows] = await connection.query(sql, values);
 
   return rows;
 }
@@ -68,5 +68,14 @@ export const getProductID = async (id) => {
   return results[0];
 
    
+}
+
+// Get a random set of products for the landing page.
+export const getRandomProducts = async (limit = 4) => {
+  const sql = "SELECT * FROM products ORDER BY RAND() LIMIT ?";
+
+  const [rows] = await connection.query(sql, [limit]);
+
+  return rows;
 }
 

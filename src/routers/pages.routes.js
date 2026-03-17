@@ -1,27 +1,25 @@
 import { Router } from 'express';
-import * as ctl from '../controllers/products.controller.js';
+import * as productCtl from '../controllers/products.controller.js';
+import * as userCtl from '../controllers/user.controller.js'
+
 const router = Router();
 
 
-// Stub Login Page
-router.get("/login", (req, res) => {
-  res.render("login", {
-    title: "Login"
-  });
-});
+
 
 // Stub Register Page
-router.get("/register", (req, res) => {
-  res.render("register", {
-    title: "Register"
-  });
-});
+router.get("/register", userCtl.registerPage);
+router.post('/register', userCtl.register)
+
+// Stub Login Page
+router.get("/login", userCtl.loginPage);
+router.post('/login', userCtl.login)
 
 // Stub Products Page
-router.get("/products", ctl.allProducts);
+router.get("/products", productCtl.allProducts);
 
 // Stub Single product page by ID
-router.get("/products/:id", ctl.getProductsById);
+router.get("/products/:id", productCtl.getProductsById);
 
 // Stub About Page 
 router.get("/about", (req, res) => {

@@ -21,6 +21,12 @@
   
   <%- include ("partials/header") %>
 
+  <% if (errors) { %>
+    <div class="error">
+        <p><%= errors %></p>
+    </div>
+  <% } %>
+
   <main>
     <div class="register-container">
       <h1>Register</h1>
