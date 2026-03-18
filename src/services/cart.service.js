@@ -10,13 +10,13 @@ export const getCart = (session) => {
 export const addToCart = (session, product) => {
     const cart = getCart(session);
 
-    const existing = cart.find(p => p.productID === product.productID);
+    const existing = cart.find(p => p.id === product.id);
 
     if(existing){
         existing.quantity += 1;
     }else {
         cart.push({
-            productID: product.productID,
+            id: product.id,
             name: product.name,
             price: product.price,
             quantity: 1
@@ -29,10 +29,10 @@ export const addToCart = (session, product) => {
 
 };
 
-export const removeFromCart = (session, productID) => {
+export const removeFromCart = (session, id) => {
     const cart = getCart(session);
 
-    const updatedCart = cart.filter(p => p.productID !== productID);
+    const updatedCart = cart.filter(p => p.id !== id);
 
     session.cart = updatedCart;
     return updatedCart;

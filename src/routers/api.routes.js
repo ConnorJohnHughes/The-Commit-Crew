@@ -15,7 +15,7 @@ router.get("/api/cart", cartCtl.getCart);
 
 router.post("/api/cart/items", cartCtl.addItem);
 
-router.delete("/api/cart/items/:productId", cartCtl.removeItem);
+router.delete("/api/cart/items/:id", cartCtl.removeItem);
 
 router.post("/api/cart/clear", cartCtl.clearCart);
 

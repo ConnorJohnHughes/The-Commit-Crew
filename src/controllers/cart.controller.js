@@ -11,17 +11,17 @@ export const getCart = (req, res) => {
 
 
 export const addItem = (req, res) => {
-    const { productID, name, price } = req.body;
+    const { id, name, price } = req.body;
 
-    if (!productID || !name || !price) {
+    if (!id || !name || !price) {
         return res.status(400).json({
             success: false,
-            message: "productID, name, and price are required"
+            message: "id, name, and price are required"
         });
     }
 
     const cart = cartService.addToCart(req.session, {
-        productID: Number(productID),
+        id: Number(id),
         name,
         price: Number(price)
     });
@@ -33,16 +33,16 @@ export const addItem = (req, res) => {
 };
 
 export const removeItem = (req, res) => {
-    const { productId } = req.params;
+    const { id } = req.params;
 
-    if (!productId) {
+    if (!id) {
         return res.status(400).json({
             success: false,
-            message: "productId is required"
+            message: "id is required"
         });
     }
 
-    const cart = cartService.removeFromCart(req.session, Number(productId));
+    const cart = cartService.removeFromCart(req.session, Number(id));
 
     return res.status(200).json({
         success: true,

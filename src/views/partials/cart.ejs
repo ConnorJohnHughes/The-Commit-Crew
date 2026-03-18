@@ -6,7 +6,7 @@
             <p>Cart is empty</p>
         <% } else { %>
             <% cart.forEach(item => { %>
-                <div class="cart-item" data-id="<%= item.productID %>">
+                <div class="cart-item" data-id="<%= item.id %>">
                     <span><%= item.name %></span>
                     <span>x <%= item.quantity %></span>
                     <button class="remove-item">Remove</button>

@@ -21,7 +21,6 @@
   
   <%- include ("partials/header") %>
 
-  <%- include("partials/cart") %>
 <main class="single-product-container">
   <a href="/products" class="back-btn">← Back to Products</a>
   <div class="pure-g single-product">
@@ -45,7 +44,7 @@
         </p>
 
         <div class="single-product-actions pure-g">
-          <div class="product" data-id="<%= product.productID %>">
+          <div class="product" data-id="<%= product.id %>">
               <h3><%= product.name %></h3>
               <p>$<%= product.price %></p>
               <button class="add-to-cart">Add to Cart</button>
