@@ -82,11 +82,16 @@ All products include realistic names, pricing, and descriptions, to simulate a p
   Dashboard/Home
   Products
   Single Products page
+  Login
+  Register
+
+# Protected Pages
+ - /products
+ - /products/id
+ - All /api/* endpoints related to cart behavior
 
 
 - **In the future:**
-  Login
-  Register
   About
 ---
 
@@ -114,6 +119,27 @@ All products include realistic names, pricing, and descriptions, to simulate a p
       - Endpoint: /api/products/:id 
         - This will show the product matching an ID
 
+# **Session based Cart Api endpoints** 
+  - **GET**
+    - /api/cart
+    - Get items currently in cart
+
+  - **POST**
+    - /api/cart/items
+    - Add items to cart
+
+  - **DELETE**
+    - /api/cart/items/:productId
+    - Delete product from cart using id
+
+  - **POST**
+    - /api/cart/clear
+    - Clear the whole cart
+
+# **Session-Based Cart Model**
+The cart is stored in server-side session state.
+
+  - req.session.cart
 
 
 # Project setup instructions
