@@ -35,7 +35,9 @@ export const allProducts = async (req, res) => {
 
        return res.render('products', {
               title: 'Products',
-              products: products
+              products: products,
+              showCart: true,
+              user : req.session.user
   });
   
   
@@ -63,7 +65,9 @@ export const getProductsById = async (req, res) => {
 
     return res.render("singleProductPage", {
       title: product.name,
-      product: product
+      product: product,
+      showCart: true,
+      user : req.session.user
     });
 
   } catch (error) {

@@ -2,18 +2,38 @@
     <h3>Cart (<span id="cart-count"><%= cart.length %></span>)</h3>
 
     <div id="cart-items">
+    <% let subtotal = 0 %>
+
         <% if (cart.length === 0) { %>
             <p>Cart is empty</p>
         <% } else { %>
+
+
+
             <% cart.forEach(item => { %>
+                <% subtotal += item.price * item.quantity; %>
                 <div class="cart-item" data-id="<%= item.id %>">
-                    <span><%= item.name %></span>
-                    <span>x <%= item.quantity %></span>
-                    <button class="remove-item">Remove</button>
+                        <img src="<%= item.image_path || '/image/placeholder.png' %>" alt="<%= item.name %>" class="cart-item-img">
+                    <div class="cart-item-info">
+                        <span><%= item.name %></span>
+                        <span>x <%= item.quantity %></span>
+                    </div>
+                        <span class="cart-price"> <%= (item.price * item.quantity).toFixed(2) %> </span>
+                        <button class="remove-item">Remove</button>
                 </div>
+
+
             <% }) %>
         <% } %>
     </div>
+    <div class="cart-subtotal">
+        Subtotal : $<span id="cart-subtotal"> <%= cart.length ? subtotal.toFixed(2) : '0.00' %></span>
+    </div>
 
-    <button id="clear-cart">Clear Cart</button>
+    <div class="cart-actions">
+        <button id="clear-cart">Clear Cart</button>
+        <button id="checkout-cart">Checkout</button>
+    </div>
+
+
 </div>

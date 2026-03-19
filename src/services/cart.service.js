@@ -19,7 +19,8 @@ export const addToCart = (session, product) => {
             id: product.id,
             name: product.name,
             price: product.price,
-            quantity: 1
+            quantity: 1,
+            image_path: product.image_path
         });
     };
 

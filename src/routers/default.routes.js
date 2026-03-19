@@ -11,7 +11,9 @@ router.get("/", async (req, res) => {
         res.render("landingPage", {
             title: "Landing Page",
             randomProducts,
-            cart: req.session.cart || []
+            cart: req.session.cart || [],
+            showCart: true,
+            user : req.session.user
         });
     } catch (err) {
         console.error("Error loading landing page products:", err);

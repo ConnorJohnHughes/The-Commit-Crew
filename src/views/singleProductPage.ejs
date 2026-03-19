@@ -16,10 +16,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Protest+Strike&display=swap" rel="stylesheet">
+  <script src="/js/cart.js" defer></script>
 </head>
 <body>
   
   <%- include ("partials/header") %>
+    <% if (showCart && user) { %>
+      <%- include('partials/cart') %>
+    <% } %>
 
 <main class="single-product-container">
   <a href="/products" class="back-btn">← Back to Products</a>
@@ -33,7 +37,7 @@
       <div class="single-product-wrapper">
         <h1><%= product.name %></h1>
 
-        <h2><p class="single-product-price">$<%= product.price %></p></h2>
+        <h2 class="single-product-price">$<%= product.price %></h2>
 
         <p class="single-product-category">
           Category: <%= product.category %>
@@ -44,12 +48,16 @@
         </p>
 
         <div class="single-product-actions pure-g">
-          <div class="product" data-id="<%= product.id %>">
-              <h3><%= product.name %></h3>
-              <p>$<%= product.price %></p>
+            <div 
+              class="product" 
+              data-id="<%= product.id %>" 
+              data-name="<%= product.name %>" 
+              data-price="<%= product.price %>"
+            >
               <button class="add-to-cart">Add to Cart</button>
           </div>
         </div>
+        
 
       </div>
     </div>
