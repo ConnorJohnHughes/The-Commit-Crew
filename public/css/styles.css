@@ -283,3 +283,54 @@ h1 {
     transform:scale(1.2);
 }
 /* end of single products page */
+
+/* ===== About page ===== */
+
+.about-page {
+    width: 75%;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+/* Top intro section */
+.about-intro {
+    margin-bottom: 3rem;
+}
+
+.about-intro h1 {
+    font-size: 3rem;
+}
+
+.about-intro p {
+    font-size: 1.2rem;
+    /* color: var(--muted); */
+}
+
+/* Shared section styling */
+.about-section {
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: var(--card);
+    border-radius: 1rem;
+    box-shadow:
+        0 10px 20px rgba(0,0,0,0.4),
+        0 0 0 1px var(--border);
+}
+
+/* Values layout */
+.values-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Individual value cards */
+.value-card {
+    background-color: #0a0a0a;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    width: 250px;
+    box-shadow: 5px 5px #1a1a1a;
+    transition: all 0.3s ease;
+}
