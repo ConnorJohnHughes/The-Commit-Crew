@@ -30,10 +30,7 @@ export const loginPage = (req, res) => res.status(200).render("login", {
 //login
 export const login = async (req, res) => {
 
-    // passport.authenticate('local', {
-    //     successRedirect: "/products",
-    //     failureRedirect: "/login?errors=Invalid Credentials"
-    // })
+    
 
     const { username, password } = req.body;
 
@@ -58,7 +55,19 @@ export const login = async (req, res) => {
         username: user.username,
         role: user.role
     }
+    // passport.authenticate('local', {
+    //     successRedirect: "/products",
+    //     failureRedirect: "/login?errors=Invalid Credentials"
+    // })
     // console.log(user);
     console.log(req.session.user);
     return res.redirect("/");
 };
+
+export const isLoggedIn = (req, res, next) => {
+    if (req.user) {
+        return next();
+    } else {
+        res.redirect("/login");
+    }
+}

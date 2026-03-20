@@ -14,6 +14,14 @@ router.post('/register', userCtl.register)
 // Stub Login Page
 router.get("/login", userCtl.loginPage);
 router.post('/login', userCtl.login)
+// Stub About Page 
+router.get("/about", (req, res) => {
+  res.render("about", {
+    title: "About"
+  });
+});
+
+router.use(userCtl.isLoggedIn)
 
 // Stub Products Page
 router.get("/products", productCtl.allProducts);
@@ -21,12 +29,8 @@ router.get("/products", productCtl.allProducts);
 // Stub Single product page by ID
 router.get("/products/:id", productCtl.getProductsById);
 
-// Stub About Page 
-router.get("/about", (req, res) => {
-  res.render("about", {
-    title: "About"
-  });
-});
+
+
 
 
 

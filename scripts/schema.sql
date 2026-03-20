@@ -7,6 +7,7 @@
 
 -- Remove the products table if it already exists
 DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS users;
 
 -- Create the products table
 CREATE TABLE products (

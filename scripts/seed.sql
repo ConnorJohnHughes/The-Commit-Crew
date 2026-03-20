@@ -38,5 +38,4 @@ VALUES
 
 DELETE FROM users; 
 
-INSERT INTO users (username, password)
-VALUES ('f00d', 'unhashed');
+INSERT INTO users (username, password) VALUES ('f00d', 'unhashed');
