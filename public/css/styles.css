@@ -121,6 +121,10 @@ h1 {
     width: 90%;
     border-radius: 2rem;
     margin: auto;
+    img{
+        border-radius: 1rem;
+        box-shadow: 0px 0px 100px 100px gray;
+    }
 }
 /* End of Cards css */
 
@@ -207,17 +211,22 @@ h1 {
     width: 80%;
     border-radius: 2rem;
     margin: auto;
+    img{
+        border-radius: 1rem;
+        box-shadow: 0px 0px 100px 100px gray;
+    }
 }
 
 .product-card{
     border-radius: 2rem;
     border: 8px solid #712828;
-    background-color: #6C6A72;
+    background-color: #1a1a1a;
     box-shadow: 10px 10px #1a1a1a;
     margin:1rem;
     padding: 1rem;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     min-height: 400px;
+    overflow: hidden;
     .product-info h3{
         font-size: 26px;
     }
@@ -245,6 +254,7 @@ h1 {
 .single-product-container{
     width: 75%;
     margin: auto;
+
 }
 .back-btn{
     display: block;
@@ -266,7 +276,7 @@ h1 {
     padding: 2rem;
     border: 4px solid rgb(255, 255, 255);
     border-radius: 2rem;
-    height: 80%;
+    height: 50%;
     background-color: #1a1a1a;
 }
 

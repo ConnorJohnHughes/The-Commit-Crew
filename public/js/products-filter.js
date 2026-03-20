@@ -75,8 +75,10 @@ function createProductCard(product) {
                   <h3>${product.name}</h3>
                   <p class="price">$${product.price}</p>
               </div>
+              <h2> VIEW >></h2>
               
           </div>
+          
       </a>
     </div>   
   `;
