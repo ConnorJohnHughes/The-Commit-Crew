@@ -1,7 +1,12 @@
-<div id="mini-cart" class="cart-widget">
-    <h3>Cart (<span id="cart-count"><%= cart.length %></span>)</h3>
+<div id="cart-backdrop" class="cart-backdrop"></div>
+<aside id="mini-cart" class="cart-sidebar">
+    
+    <div class="cart-header">
+        <h3>Cart (<span id="cart-count"><%= cart.length %></span>)</h3>
+        <button id="cart-close" class="cart-close-btn">&times;</button>
+    </div>
 
-    <div id="cart-items">
+    <div id="cart-items" class="cart-body">
     <% let subtotal = 0 %>
 
         <% if (cart.length === 0) { %>
@@ -16,7 +21,11 @@
                         <img src="<%= item.image_path || '/image/placeholder.png' %>" alt="<%= item.name %>" class="cart-item-img">
                     <div class="cart-item-info">
                         <span><%= item.name %></span>
-                        <span>x <%= item.quantity %></span>
+                        <div class="cart-qty-controls">
+                            <button class="qty-btn decrease-qty" data-id="${item.id}">-</button>
+                            <span class="cart-qty">${item.quantity}</span>
+                            <button class="qty-btn increase-qty" data-id="${item.id}">+</button>
+                        </div>
                     </div>
                         <span class="cart-price"> <%= (item.price * item.quantity).toFixed(2) %> </span>
                         <button class="remove-item">Remove</button>
@@ -26,14 +35,15 @@
             <% }) %>
         <% } %>
     </div>
-    <div class="cart-subtotal">
-        Subtotal : $<span id="cart-subtotal"> <%= cart.length ? subtotal.toFixed(2) : '0.00' %></span>
+    <div id="cart-footer" class="cart-footer">
+        <div class="cart-subtotal">
+            Subtotal : $<span id="cart-subtotal"> <%= cart.length ? subtotal.toFixed(2) : '0.00' %></span>
+        </div>
+
+        <div class="cart-actions">
+            <button id="clear-cart">Clear Cart</button>
+            <button id="checkout-cart">Checkout</button>
+        </div>
+
     </div>
-
-    <div class="cart-actions">
-        <button id="clear-cart">Clear Cart</button>
-        <button id="checkout-cart">Checkout</button>
-    </div>
-
-
-</div>
+</aside>

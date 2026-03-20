@@ -79,10 +79,10 @@ All products include realistic names, pricing, and descriptions, to simulate a p
 ---
 # SSR( Server Side Routes)
 - **Pages with routes:**
-  Dashboard/Home
-  Products
-  Single Products page
-  Login
+  Dashboard/Home,
+  Products,
+  Single Products page,
+  Login,
   Register
 
 # Protected Pages

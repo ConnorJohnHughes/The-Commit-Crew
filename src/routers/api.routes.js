@@ -19,6 +19,10 @@ router.delete("/api/cart/items/:id", cartCtl.removeItem);
 
 router.post("/api/cart/clear", cartCtl.clearCart);
 
+router.patch("/api/cart/items/:id/increase" , cartCtl.increaseQuantity);
+
+router.patch("/api/cart/items/:id/decrease", cartCtl.decreaseQuantity);
+
 
 
 export default router;

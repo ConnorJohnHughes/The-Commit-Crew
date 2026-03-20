@@ -11,7 +11,8 @@ export const getCart = (req, res) => {
 
 
 export const addItem = (req, res) => {
-    const { id, name, price } = req.body;
+    // eslint-disable-next-line camelcase
+    const { id, name, price, image_path} = req.body;
 
     if (!id || !name || !price) {
         return res.status(400).json({
@@ -23,8 +24,11 @@ export const addItem = (req, res) => {
     const cart = cartService.addToCart(req.session, {
         id: Number(id),
         name,
-        price: Number(price)
+        price: Number(price),
+        // eslint-disable-next-line camelcase
+        image_path
     });
+    console.log("REQ BODY:", req.body);
 
     return res.status(201).json({
         success: true,
@@ -56,5 +60,41 @@ export const clearCart = (req, res) => {
     return res.status(200).json({
         success: true,
         data: { cart: [] }
+    });
+};
+
+export const increaseQuantity = (req, res) => {
+    const { id } = req.params;
+
+    if (!id) {
+        return res.status(400).json({
+            success: false,
+            message: "id is required"
+        });
+    }
+
+    const cart = cartService.increaseQuantity(req.session, Number(id));
+
+    return res.status(200).json({
+        success: true,
+        data: { cart }
+    });
+};
+
+export const decreaseQuantity = (req, res) => {
+    const { id } = req.params;
+
+    if (!id) {
+        return res.status(400).json({
+            success: false,
+            message: "id is required"
+        });
+    }
+
+    const cart = cartService.decreaseQuantity(req.session, Number(id));
+
+    return res.status(200).json({
+        success: true,
+        data: { cart }
     });
 };
