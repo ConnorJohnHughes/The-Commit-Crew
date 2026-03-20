@@ -4,7 +4,10 @@ import * as userService from './../services/user.service.js'
 //register
 export const registerPage = (req, res) => res.status(200).render("register", {
     title: "Register",
-    errors: req.query.errors
+    errors: req.query.errors,
+    user : req.session.user,
+    cart: req.session.cart || [],
+    showCart: true,
 })
 export const register = (req, res) => {
     const {username, password, confirm} = req.body;
@@ -19,7 +22,10 @@ export const register = (req, res) => {
 
 export const loginPage = (req, res) => res.status(200).render("login", {
     title: "Login",
-    errors: req.query.errors
+    errors: req.query.errors,
+    user : req.session.user,
+    cart: req.session.cart || [],
+    showCart: true,
 });
 
 // export const login = passport.authenticate('local', {
@@ -71,3 +77,8 @@ export const isLoggedIn = (req, res, next) => {
         res.redirect("/login");
     }
 }
+
+export const useLogout = (req, res, next) => {
+  req.logout(function(err) {
+    return res.redirect('/');
+  })}

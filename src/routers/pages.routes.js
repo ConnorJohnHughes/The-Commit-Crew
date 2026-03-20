@@ -14,10 +14,18 @@ router.post('/register', userCtl.register)
 // Stub Login Page
 router.get("/login", userCtl.loginPage);
 router.post('/login', userCtl.login)
+
+// routes/auth.js
+router.post('/logout', userCtl.useLogout);
+
 // Stub About Page 
 router.get("/about", (req, res) => {
   res.render("about", {
-    title: "About"
+    title: "About",
+    user : req.session.user,
+    cart: req.session.cart || [],
+    showCart: true,
+    user : req.session.user
   });
 });
 

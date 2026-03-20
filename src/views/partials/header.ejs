@@ -20,12 +20,24 @@
         <div class="pure-u-1 pure-u-xl-2-3 nav-right">
           <a class="pure-button pure-button-primary" href="/products">Products</a>
           <a class="pure-button pure-button-primary" href="/about">About</a>
+          <% if (!user) { %>
           <a class="pure-button pure-button-primary" href="/login">Login</a>
           <a class="pure-button pure-button-primary" href="/register">Register</a>
-
+          <% } %>
+          <% if (user) { %>
+            <form action="/logout" method="post">
+              <button type="submit" class="pure-button pure-button-primary">
+                  Logout
+              </button>
+            </form>
+          <% } %>
+          <% if (showCart && user) { %>
+            <%- include('cart') %>
+          <% } %>
           <button id="cart-toggle" class="pure-button pure-button-primary cart-toggle-btn">
              Cart (<span id="cart-count"><%= cart ? cart.length : 0 %></span>)
           </button>
+          
         </div>
     </nav>
 
