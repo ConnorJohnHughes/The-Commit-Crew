@@ -204,7 +204,7 @@ h1 {
     
 }
 .product-image{
-    width: 40%;
+    width: 80%;
     border-radius: 2rem;
     margin: auto;
 }
@@ -212,7 +212,7 @@ h1 {
 .product-card{
     border-radius: 2rem;
     border: 8px solid #712828;
-    background-color: #0a0a0a;
+    background-color: #6C6A72;
     box-shadow: 10px 10px #1a1a1a;
     margin:1rem;
     padding: 1rem;
@@ -256,7 +256,7 @@ h1 {
     img{
         display: block;
         margin: auto;
-        height: 90%;
+        height: 60%;
     }
 }
 
