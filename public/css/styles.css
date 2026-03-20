@@ -334,3 +334,16 @@ h1 {
     box-shadow: 5px 5px #1a1a1a;
     transition: all 0.3s ease;
 }
+
+/* end of about page */
+
+/* login page */
+
+.logreg-container{
+    padding-top: 5rem;
+    font-size: x-large;
+    height:80vh;
+    display: block;
+    text-align: center;
+    margin: auto
+}
