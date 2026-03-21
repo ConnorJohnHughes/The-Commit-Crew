@@ -355,6 +355,31 @@ h1 {
     transition: all 0.3s ease;
 }
 
+.value-card:hover {
+    transform: translate(-8px);
+}
+
+/* CTA section */
+.about-cta {
+    margin-top: 3rem;
+}
+
+/* Button Styling */
+.cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    background-color: #111111;
+    border: 2px spolid white;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1c1c1c;
+}
+
 /* end of about page */
 
 /* login page */
