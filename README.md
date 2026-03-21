@@ -144,12 +144,12 @@ The cart is stored in server-side session state.
 
 # Project setup instructions
 1. Fork and clone repo
-2. Open terminla and git clone repo
+2. Open terminal and git clone repo
 3. Open folder/root folder for project directory
 4. In terminal in VS code or IDE of choice run the command "npm i"
 5. Look in scripts folder in project for seed and schema data for database
 6. Copy and run schema.sql in database of choice
-7. In created database schema copy and run seed.sql to create data for table
+7. In created database copy schema and run seed.sql to create data for table
 8. Back in IDE open terminal and run command "npm run dev"
 9. Terminal should show :
 ----------------------Connected to Database-----------------------------
